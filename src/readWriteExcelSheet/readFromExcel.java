@@ -20,10 +20,10 @@ public class readFromExcel {
 			@SuppressWarnings("resource")
 			XSSFWorkbook seleniumExcelFile = new XSSFWorkbook(inputStream);
 			Sheet mySheet = seleniumExcelFile.getSheet("Sheet1");
-			int rowCount = mySheet.getLastRowNum()- mySheet.getFirstRowNum();
+			int rowCount1 = mySheet.getLastRowNum()- mySheet.getFirstRowNum();
 			String[] arr = new String[5];
 			
-			for(int i=0 ;i<=rowCount;i++){ 
+			for(int i=0 ;i<=rowCount1;i++){ 
 				Row row = mySheet.getRow(i);
 				arr[i] = row.getCell(0).toString();
 				System.out.print(row.getCell(0) + "->" + row.getCell(1) + "--------");
